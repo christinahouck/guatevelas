@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Begin Christina's CSS */
+/* Setup */ 
+$brown: #b66e2d;
+$light-brown: #9d8f66;
+
+$green: #586a3a;
+$green-2: #7c885f;
+$green-3: #84946a;
+$green-4: #9ea783;
+$green-5: #abb48f;
+$green-6: #b4bca4;
+$green-7: #bdbd99;
+
+$white-yellow: #faf8dd;
+
+$secondary-font: 'Playfair Display', serif;
+
+.guatevelas {
+	.container {
+		max-width: 900px;
+    	width: 100%;
+	}
+	.flex {
+		display: flex;
+	}
+	.flex-col {
+		flex-direction: column;
+	}
+	.flex-row {
+		flex-direction: row;
+	}
+	.flex-center {
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav {
+		flex-wrap: nowrap;
+		position: sticky;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+		div.container {
+			align-items: center;
+			justify-content: space-between;
+
+			a.logo-container {
+				img {
+					margin: 12px 0;
+				}
+				img.logo {
+					height: 60px;
+					width: auto;
+				}
+				img.brandmark {
+					height: 40px;
+					width: auto;
+					margin-left: 10px;
+					margin-top: 20px;
+				}
+				h1 {
+					margin-left: 12px;
+					font-size: 30px;
+					color: #333;
+				}
+			}
+
+			div.menu {
+				font-family: $secondary-font;
+
+				a.menu-item {
+					padding: 24px;
+					color: $green;
+					text-decoration: none;
+
+					&:nth-child(2) {
+						margin-right: 60px;
+					}
+
+					&:hover {
+						background-color: $green-6;
+					}
+				}
+				div.language-selector {
+					button.language {
+						font-family: $secondary-font;
+						font-size: 14px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						margin: 8px;
+						background-color: transparent;
+						border: transparent;
+						color: $green;
+
+						img {
+							margin-bottom: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.product-page {
+	section.product-info {
+		flex-wrap: wrap;
+		margin-top: 64px;
+		div.product-image__container {
+			width: 50%;
+		}
+		div.product-summary__container {
+			width: 50%;
+			align-items: flex-start;
+			justify-content: flex-start;
+			h1 {
+				color: $green;
+				width: 100%;
+				font-family: $secondary-font;
+				font-size: 42px;
+			}
+			div.price-box {
+				margin-top: 24px;
+				color: $brown;
+				h2 {
+					font-size: 30px;
+				}
+				span {
+					font-family: $secondary-font;
+					font-size: 14px;
+				}
+				#currency {
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+}

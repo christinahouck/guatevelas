@@ -1,0 +1,219 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Begin Christina's CSS */
+/* Setup */
+.guatevelas .container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.guatevelas .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.guatevelas .flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.guatevelas .flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.guatevelas .flex-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.guatevelas nav {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.guatevelas nav div.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.guatevelas nav div.container a.logo-container img {
+  margin: 12px 0;
+}
+
+.guatevelas nav div.container a.logo-container img.logo {
+  height: 60px;
+  width: auto;
+}
+
+.guatevelas nav div.container a.logo-container img.brandmark {
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.guatevelas nav div.container a.logo-container h1 {
+  margin-left: 12px;
+  font-size: 30px;
+  color: #333;
+}
+
+.guatevelas nav div.container div.menu {
+  font-family: "Playfair Display", serif;
+}
+
+.guatevelas nav div.container div.menu a.menu-item {
+  padding: 24px;
+  color: #586a3a;
+  text-decoration: none;
+}
+
+.guatevelas nav div.container div.menu a.menu-item:nth-child(2) {
+  margin-right: 60px;
+}
+
+.guatevelas nav div.container div.menu a.menu-item:hover {
+  background-color: #b4bca4;
+}
+
+.guatevelas nav div.container div.menu div.language-selector button.language {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 8px;
+  background-color: transparent;
+  border: transparent;
+  color: #586a3a;
+}
+
+.guatevelas nav div.container div.menu div.language-selector button.language img {
+  margin-bottom: 8px;
+}
+
+.product-page section.product-info {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.product-page section.product-info div.product-image__container {
+  width: 50%;
+}
+
+.product-page section.product-info div.product-summary__container {
+  width: 50%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.product-page section.product-info div.product-summary__container h1 {
+  color: #586a3a;
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+}
+
+.product-page section.product-info div.product-summary__container div.price-box {
+  margin-top: 24px;
+  color: #b66e2d;
+}
+
+.product-page section.product-info div.product-summary__container div.price-box h2 {
+  font-size: 30px;
+}
+
+.product-page section.product-info div.product-summary__container div.price-box span {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+}
+
+.product-page section.product-info div.product-summary__container div.price-box #currency {
+  margin-left: 8px;
+}
+/*# sourceMappingURL=styles.css.map */
