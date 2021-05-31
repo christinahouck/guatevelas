@@ -179,8 +179,15 @@ table {
   margin-bottom: 8px;
 }
 
-.product-page section.product-info {
-  margin-top: 64px;
+main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (min-width: 600px) {
+  .product-page section.product-info {
+    margin-top: 64px;
+  }
 }
 
 .product-page section.product-info .container .product-info__main {
@@ -219,7 +226,6 @@ table {
 }
 
 .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers {
-  height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,14 +242,40 @@ table {
   padding: 0 14px;
 }
 
+@media (max-width: 600px) {
+  .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 601px) {
+  .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: 550px;
+  }
+}
+
 .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers .thumbnail-image-swiper {
   height: 100%;
-  width: 100px;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0;
   margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+  .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers .thumbnail-image-swiper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers .thumbnail-image-swiper {
+    width: 100px;
+  }
 }
 
 .product-page section.product-info .container .product-info__main div.product-image__container div.prod-swipers .thumbnail-image-swiper .swiper-slide {
@@ -323,6 +355,14 @@ table {
   line-height: 1.2;
 }
 
+@media (max-width: 600px) {
+  .product-page section.product-info .container .product-info__main div.product-image__container div.social-share p {
+    margin-right: 0;
+    margin-left: 2px;
+    font-size: 12px;
+  }
+}
+
 .product-page section.product-info .container .product-info__main div.product-image__container div.social-share a {
   height: 30px;
   width: 30px;
@@ -347,6 +387,8 @@ table {
   text-decoration: none;
   border-radius: 50%;
   margin: 0 4px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .product-page section.product-info .container .product-info__main div.product-image__container div.social-share a:hover, .product-page section.product-info .container .product-info__main div.product-image__container div.social-share a:active {
