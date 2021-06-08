@@ -88,6 +88,27 @@ $breakpoint-small: '600px';
 	font-size: 18px;
 	line-height: 1.5;
 }
+@mixin shadow {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+@mixin flex {
+	display: flex;
+}
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+@mixin flex-center {
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-wrap {
+	flex-wrap: wrap;
+}
 
 
 .guatevelas {
@@ -96,33 +117,30 @@ $breakpoint-small: '600px';
     	width: 100%;
 		padding: 0 14px;
 	}
-	.flex {
-		display: flex;
-	}
-	.flex-col {
-		flex-direction: column;
-	}
-	.flex-row {
-		flex-direction: row;
-	}
-	.flex-center {
-		align-items: center;
-		justify-content: center;
+	.wide-container {
+		max-width: 1300px;
+		width: 100%;
+		padding: 0 14px;
 	}
 
 	nav {
 		flex-wrap: nowrap;
 		position: sticky;
-		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		@include shadow;
+		@include flex-row;
+		@include flex-center;
 
 		div.container {
 			align-items: center;
 			justify-content: space-between;
+			@include flex-row;
 			@media (max-width: 920px) {
 				margin-left: 10px;
 			}
 
 			a.logo-container {
+				@include flex-row;
+				@include flex-center;
 				img {
 					margin: 12px 0;
 				}
@@ -145,7 +163,8 @@ $breakpoint-small: '600px';
 
 			div.menu {
 				font-family: $secondary-font;
-
+				@include flex-row;
+				@include flex-center;
 				a.menu-item {
 					padding: 24px;
 					color: $green;
@@ -160,6 +179,7 @@ $breakpoint-small: '600px';
 					}
 				}
 				div.language-selector {
+					@include flex;
 					button.language {
 						font-family: $secondary-font;
 						font-size: 14px;
@@ -187,14 +207,38 @@ main {
 	overflow-x: hidden;
 }
 
+.breadcrumbs {
+	@include flex-row;
+	@include flex-center;
+	margin-top: 24px;
+	div.container {
+		@include flex-row;
+		a, span {
+			margin-right: 6px;
+			color: $light-brown;
+		}
+		a {
+			color: $green-2;
+			&:hover, &:active {
+				color: $green-4;
+			}
+		}
+		span {
+			font-size: 12px;
+		}
+	}
+}
+
 .product-page {
 	section.product-info {
 		@media (min-width: $breakpoint-small) {
-			margin-top: 64px;
+			margin-top: 34px;
 		}
-
+		@include flex-col;
+		@include flex-center;
 		.container {
 			.product-info__main {
+				@include flex-row;
 				align-items: flex-start;
 				justify-content: space-between;
 				@media(max-width: $breakpoint-medium) {
@@ -276,9 +320,9 @@ main {
 						}
 					}
 					div.social-share {
+						@include flex-row;
+						@include flex-center;
 						margin-top: 20px;
-						align-items: center;
-						justify-content: center;
 						width: 100%;
 
 						p {
@@ -296,14 +340,12 @@ main {
 						}
 					
 						a {
+							@include flex-row;
+							@include flex-center;
 							height: 30px;
 							width: 30px;
 							padding: 4px;
 							text-align: center;
-							display: flex;
-							flex-direction: row;
-							align-items: center;
-							justify-content: center;
 							background-color: $green-4;
 							color: $white-yellow;
 							font-size: 20px;
@@ -321,6 +363,7 @@ main {
 
 				}
 				div.product-summary__container {
+					@include flex-col;
 					@media(max-width: $breakpoint-medium) {
 						width: 100%;
 						margin-top: 60px;
@@ -343,6 +386,7 @@ main {
 						@include h2;
 					}
 					div.price-box {
+						@include flex-row;
 						margin-top: 24px;
 						color: $brown;
 						h2 {
@@ -350,6 +394,7 @@ main {
 							color: $brown;
 						}
 						.cents {
+							@include flex-row;
 							align-items: flex-start;
 							justify-content: flex-start;
 							margin-top: 4px;
@@ -390,6 +435,8 @@ main {
 		}
 	}
 	section.more-info {
+		@include flex-col;
+		@include flex-center;
 		padding: 0 14px;
 		div.container {
 			h2 {
@@ -408,6 +455,39 @@ main {
 	@media (min-width: $breakpoint-large) {
 		section.more-info {
 			margin: 120px 0;
+		}
+	}
+	section.you-may-like {
+		@include flex-col;
+		@include flex-center;
+		margin-bottom: 140px;
+		div.wide-container {
+			@include flex-col;
+			@include flex-center;
+			h2 {
+				@include h2;
+			}
+			div.more-suggestions {
+				@include flex-row;
+				@include flex-center;
+				@include flex-wrap;
+				a.suggestion {
+					@include flex-col; 
+					@include flex-center;
+					margin: 12px;
+					border: 2px solid white;
+					box-sizing: border-box;
+					border-radius: 12px;
+					padding: 12px;
+					&:hover {
+						@include shadow;
+					}
+					h3 {
+						@include p;
+						text-decoration: none;
+					}
+				}
+			}
 		}
 	}
 }
