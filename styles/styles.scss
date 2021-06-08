@@ -479,6 +479,7 @@ main {
 					box-sizing: border-box;
 					border-radius: 12px;
 					padding: 12px;
+					text-decoration: none;
 					&:hover {
 						@include shadow;
 					}

@@ -737,6 +737,7 @@ main {
           box-sizing: border-box;
   border-radius: 12px;
   padding: 12px;
+  text-decoration: none;
 }
 
 .product-page section.you-may-like div.wide-container div.more-suggestions a.suggestion:hover {
