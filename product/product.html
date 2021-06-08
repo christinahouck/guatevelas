@@ -21,36 +21,43 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-            <nav class="flex flex-row flex-center">
-                <div class="container flex flex-row">
-                    <a class="logo-container flex flex-row flex-center" href="/">
-                        <img class="logo" src="../assets/logo_guatevelas.png" aria-hidden=true>
-                        <img class="brandmark" src="../assets/brandmark_guatevelas.png" alt="Guatevelas">
-                    </a>
-                    <div class="menu flex flex-row flex-center">
-                        <a class="menu-item" id="shop" href="#">Shop</a>
-                        <a class="menu-item" id="about" href="#">About</a>
-                        <div class="language-selector flex">
-                            <button class="language" id="english">
-                                <img src="https://via.placeholder.com/35x20" alt="English">
-                                <span>English</span>
-                            </button>
-                            <button class="language" id="spanish">
-                                <img src="https://via.placeholder.com/35x20" alt="Español">
-                                <span>Espa&ntilde;ol</span>
-                            </button>
-                        </div>
+        <nav>
+            <div class="container">
+                <a class="logo-container" href="/">
+                    <img class="logo" src="../assets/logo_guatevelas.png" aria-hidden=true>
+                    <img class="brandmark" src="../assets/brandmark_guatevelas.png" alt="Guatevelas">
+                </a>
+                <div class="menu">
+                    <a class="menu-item" id="shop" href="#">Shop</a>
+                    <a class="menu-item" id="about" href="#">About</a>
+                    <div class="language-selector">
+                        <button class="language" id="english">
+                            <img src="https://via.placeholder.com/35x20" alt="English">
+                            <span>English</span>
+                        </button>
+                        <button class="language" id="spanish">
+                            <img src="https://via.placeholder.com/35x20" alt="Español">
+                            <span>Espa&ntilde;ol</span>
+                        </button>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
         <main>
-
-            <div class="breadcrumbs"></div>
-
-            <section class="product-info flex flex-col flex-center">
+            <div class="breadcrumbs">
                 <div class="container">
-                    <div class="product-info__main flex flex-row">
+                    <a href="/">Home</a>
+                    <span class="carat"> > </span>
+                    <a href="/product">Shop</a>
+                    <span class="carat"> > </span>
+                    <a href="/product/product.html">Product name</a>
+                </div>
+            </div>
+
+            <section class="product-info">
+                <div class="container">
+                    <div class="product-info__main">
                         <div class="product-image__container">
                             <div class="prod-swipers" style="--swiper-navigation-color: #7c885f; --swiper-pagination-color: #7c885f;">
                                 <div thumbsSlider="" class="swiper-container thumbnail-image-swiper">
@@ -88,7 +95,7 @@
                                     <div class="swiper-button-prev"></div>
                                 </div>  
                             </div>
-                            <div class="social-share flex flex-row">
+                            <div class="social-share">
                                 <p>Share on<br/>Social Media</p>
                                 <a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//guatevelas.com">
                                     <i class="fab fa-facebook-f"></i>
@@ -104,11 +111,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="product-summary__container flex flex-col">
+                        <div class="product-summary__container">
                             <h1>Candle Name</h1>
-                            <div class="price-box flex flex-row">
+                            <div class="price-box">
                                 <h2>$XX</h2>
-                                <div class="cents flex flex-row">
+                                <div class="cents">
                                     <span>.XX</span>
                                     <span id="currency">USD</span>
                                 </div>
@@ -134,7 +141,7 @@
                 </div>
             </section>
 
-            <section class="more-info flex flex-col flex-center">
+            <section class="more-info">
                 <div class="container">
                     <h2>More Info</h2>
                     <p>This is where we'd put more info about the candle. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -143,6 +150,26 @@
                         <li>Dolor sit amet</li>
                         <li>Consectetur</li>
                     </ul>
+                </div>
+            </section>
+
+            <section class="you-may-like">
+                <div class="wide-container">
+                    <h2>You may also like...</h2>
+                    <div class="more-suggestions">
+                        <a class="suggestion" href="#">
+                            <img src="https://via.placeholder.com/300x200" alt="#">
+                            <h3>Other product name</h3>
+                        </a>
+                        <a class="suggestion" href="#">
+                            <img src="https://via.placeholder.com/300x200" alt="#">
+                            <h3>Other product name</h3>
+                        </a>
+                        <a class="suggestion" href="#">
+                            <img src="https://via.placeholder.com/300x200" alt="#">
+                            <h3>Other product name</h3>
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>
